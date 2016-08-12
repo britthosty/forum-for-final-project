@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+
+
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Posting New Topic - The Community Forum</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="forum1_global.js" defer></script>
+
+
+
+	
+	
+		<link href="blogcss.css" rel="stylesheet" type="text/css">
+	
+
+<link href="forum1_global.css" rel="stylesheet">
+
+	
+	
+	
+
+	
+	<script language="JavaScript" type="text/javascript">
+	var global_hash = {AppId : '', perm_view_profiles : '1', forum_embed_url : '', date_format : '3', display_time : '0', uid : '206075', forum_SSO_login_url : '', less_variables : ''};
+	
+	var	isPostRequest = 0;
+	
+	</script>
+
+	
+
+	
+		
+	
+</head>
+<body class="  nolinks" >
+	<div id="fb-root"></div>
+	
+	
+	<div class="header-wrapper">
+		
+		<header id="forum_header_fixed" class="fixed-header">
+			<div class="container">
+				<div class="nav-main-container col-xs-10">
+					<div class="nav-main">
+						<div class="push-panel">
+							<ul class="dropdown-menu left" role="menu">
+								<li><a href="/">Categories</a></li>
+								
+									<li><a href="/register/members">Members</a></li>
+								
+								
+									<li><a href="/calendar">Calendar</a></li>
+								
+							</ul>
+							<a class="pull-left" id="links-nav">
+								<i class="icon icon-menu" data-placement="bottom" title="Main menu"></i>
+							</a>
+							<h3 >
+								<a href="/">
+									
+										The Community Forum
+									
+								</a>
+							</h3>
+						</div>
+						
+						
+							
+						
+						<div class="search-wrapper pull">
+							<span class="glyphicon glyphicon-search"></span>
+							<form name="inlineSearchForm" method="post" action="/search" id="inlineSearchForm">
+								<input id="inline_search_box" type="text" class="search-form form-control form-inline" name="keywords" value="" placeholder="Search">
+								<input type="hidden" id="basicSearch" name="action" value="doSearch">
+								<input type="hidden" name="search" value="true">
+								<input type="hidden" name="member" value="britthosty">
+								<input type="hidden" name="searchin" id="searchin" value="Categories">
+								
+								
+							</form>
+
+							<div class="btn-group search-category">
+								<button  id="searchContent" class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+								<span id="buttonName">Categories</span> <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu left" role="menu">
+									
+										<li><a href="javascript:void(0);" id="searchForums" ><i class="glyphicon glyphicon-search"></i>Categories</a></li>
+									
+									
+										<li><a href="javascript:void(0);" id="searchMembers"><i class="glyphicon glyphicon-search"></i>Members</a></li>
+									
+									<hr>
+									<li><a href="/search" id="advancedSearch"><i class="glyphicon glyphicon-cog"></i> <span>Advanced search</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+					
+						<ul class="nav pull-right">
+							<li class="pull-right user-panel">
+								<button class="dropdown-toggle" type="button" data-toggle="dropdown">
+									<span class="image-wrapper mini pull-left"><!-- Print Avatar image or link for profile page and pm and post pages -->
+	
+	
+		
+		
+		
+			
+				<a class="default-user " ></a>
+			
+		
+	
+
+<!-- End of Print Avatar image -->
+</span>
+									<span class="caret"></span>
+								</button>
+
+								<ul class="dropdown-menu" role="menu">
+									<span class="pull-left user-avatar-panel">
+										<li>
+											<span class="image-wrapper normal pull-left">
+												<!-- Print Avatar image or link for profile page and pm and post pages -->
+	
+	
+		
+		
+		
+			
+				<a class="default-user username" href="/profile/4615614"></a>
+			
+		
+	
+
+<!-- End of Print Avatar image -->
+
+											</span>
+										</li>
+									</span>
+									<span class="pull-right user-nav-panel">
+										<strong class="text-block">britthosty</strong>
+										<li><a href="/profile/4615614">Profile</a></li>
+										<li><a href="/register?action=preferences&userid=4615614">Settings</a></li>
+										<li><a href="/register/register?edit=1&userid=4615614">Edit Profile</a></li>
+										<li><a href="/search?do=subscribed&action=doSearch">Followed Content</a></li>
+									</span>
+									<li><a id="logout" href="/register/logout?userid=4615614" class = "fb_logout">Log Out</a></li>
+								</ul>
+							</li>
+							
+							<!-- Notifications code commented for later -->
+							<!-- <li class="logged-in pull-right">
+								<a class="user-nav-icon dropdown-toggle" type="button" data-toggle="dropdown"><i data-toggle="tooltip" data-placement="bottom" title="Notifications" class="glyphicon glyphicon-bell"></i></a>
+								<ul class="dropdown-menu right user-icons-menu" role="menu">
+								<span class="pull-left user-nav-panel">
+								  <li class="dropdown-header">
+									Notifications
+									<span class="pull-right">
+									  <small><a>Options</a></small>
+									</span>
+								  </li>
+								  <li class="user-nav-list">
+									<p>You have no new notifications since your last visit on May 6, 2014 at 7:15AM. </p>
+								  </li>
+								  <a class="user-nav-list-all" href="">&nbsp;</a>
+								</span>
+								</ul>
+								</li> -->
+							
+								<li class="logged-in pull-right">
+									<a class="user-nav-icon dropdown-toggle" type="button" data-toggle="dropdown"><i data-toggle="tooltip" data-placement="bottom" title="Messages" class="glyphicon glyphicon-comment " id="private_message_notification"></i>
+										
+									</a>
+									<ul class="dropdown-menu right user-icons-menu hidden" role="menu" id="private_message_dropdown"></ul>
+								</li>
+							
+						</ul>
+					
+				
+			</div>
+			<div id="loading_msg" class="loading-top hidden">
+				<p>Loading...</p>
+			</div>
+			<div id="ajax-msg-top" class="ajax-msg-top hidden"><p></p></div>
+		</header>
+	</div>
+	<noscript>
+		<br/><div class="alert alert-danger text-center">Note: Your browser does not have JavaScript enabled. Many features may not work properly without it. Please enable JavaScript in your browser settings.</div>
+	</noscript>
+	<div id="slide-panel">
+		
+		
+<ul class="slide-panel-content">	
+	
+	
+		<ul id="forums_toggle_link" class="panel-collapse collapse in">
+			<li><i data-toggle="collapse"  class="toggleable glyphicon icon-right-dir"> </i><a href="/categories">Categories</a>
+		
+		
+	
+					
+			
+				<ul id="542853" class="panel-collapse collapse">							
+					<li>
+						<a href="/?forum=542853">
+						Our Discussions</a>					
+					
+					</li></ul>
+						
+				
+		
+		
+	</li>
+	</ul>
+		
+		
+	<li id="latest_topics_show"><a href="/latest"><small class="glyphicon glyphicon-pencil text-muted">&nbsp;</small> Topics</a></li>
+	<hr>
+	<li id="search_link" class="push"><a href="/search"><small class="glyphicon glyphicon-search text-muted">&nbsp;</small> Search</a></li>
+	 
+		<li id="members_list_show"><a href="/register/members"> <small class="glyphicon glyphicon-user text-muted">&nbsp;</small> Members</a></li>
+	
+	
+	
+					
+		
+			<li id="calenders_show"><a href="/calendar"><small class="glyphicon glyphicon-calendar text-muted">&nbsp;</small> Calendar</a></li>
+				
+	
+		
+	
+	
+		
+			
+		
+		
+		<li>
+			
+				<a href="http://britthosty.discussionchatroom.com/?access_token=PJegVcu1GDU3Rtl9GGM8&rememberMe=1" target="_blank" id='anchor_tab_chat'>
+			
+			<small class="glyphicon glyphicon-comment text-muted">&nbsp;</small> Chat
+			</a>
+		</li>
+	
+	
+	
+	</ul>
+
+
+
+
+
+
+
+	</div>
+	
+	
+	
+	
+
+	
+	
+    <div class="main-container">
+		
+		
+		
+		<!-- Private msg dialog -->
+		
+		
+			<div class="modal fade" id="pmessage_modal" tabindex="0" role="dialog" aria-hidden="true" data-old_fixed_dialog="0"></div>
+		
+
+		<div id="bootstrap-alert-box-modal" class="modal fade in layer-to-front">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Modal title</h4>
+			  </div>
+			  <div class="modal-body">
+				<p class="text-danger"></p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			  </div>
+			</div><!-- modal-content -->
+		  </div><!-- modal-dialog -->
+		</div><!-- modal -->
+		<!-- Content -->
+		
+		
+
+		
+
+		
+
+		
+
+<!-- Compose new Topic -->
+
+<script language="javascript" type="text/javascript">
+	var tool="mb";
+	global_hash['maximum_poll_options'] = '0';
+</script>
+<div class="container content-panel">
+	
+	<div id="posts-list">
+	
+		<div class="col-xs-12 first-post preview-post">
+			<span class="pull-left post-author">
+				<span class="image-wrapper medium">
+					
+						
+					
+					<!-- Print Avatar image or link for profile page and pm and post pages -->
+	
+	
+		
+		
+		
+			
+				<a class="default-user username" href="/profile/4615614"></a>
+			
+		
+	
+
+<!-- End of Print Avatar image -->
+
+				</span>
+				<span class="post-arrow"></span>
+				<span class="author-info">
+					
+						<em>Junior Member</em>
+					
+					
+				</span>
+			</span>
+		<form method="post" id="PostTopic" action="/post/addmessage" name="PostTopic" class="form-horizontal" role="form">
+		  <div class="pull-left post-body-wrapper">
+		  	<div class="post-body pull-left">
+				<div role="tabpanel">
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#topic-details" aria-controls="topic-details" role="tab" data-toggle="tab">Topic Details</a></li>
+					
+					
+						<li class="" role="presentation"><a title="" data-original-title="" href="#poll" aria-controls="poll" role="tab" data-toggle="tab">Poll</a></li>
+					
+	                  </ul>
+	                  <!-- Tab panes -->
+	                  <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane active" id="topic-details">
+	                      <div class="panel panel-default">
+	                        <div class="panel-body table-responsive">
+	                              <div class="form-group">
+	                                <label class="col-sm-5"></label>
+	                              </div>
+									
+										
+										
+									
+								  
+									  <div class="form-group">
+										<label class="col-md-2 control-label">Title</label>
+										<div class="col-md-9">
+										  <input class="form-control" type="text" name="subject" maxlength="150" value="">
+										</div>
+									  </div>
+								  
+	                               <div class="form-group">
+									<label for="inputsign" class="col-md-2 control-label">Content</label>
+									<div class="col-md-9">
+										<div class="hdx"><textarea name="comments_0" cols=55 rows=15></textarea></div>
+										<textarea id="message" name="message" class="mceEditor form-control" cols="87" rows="15" wrap="virtual" tabindex='' tindex=''  data-easycode="checked" data-smilies="checked" data-block_html=""  data-tinymce-focus="" data-spellcheck="checked" data-objname="message" data-insert-image-btn="" data-wysiwyg="both" data-toolbarCompatible="1"></textarea>
+										<input type="hidden" name="adv_toolbar" value="" id="adv_toolbar">
+									</div>
+									
+										<!-- Load plupload and all it's runtimes -->
+										<script language="javascript" type="text/javascript" src="/js/mb/plupload.full.js" defer></script>
+										<script type="text/javascript">
+											var forum			 = '0';
+											var item_id			 = '';
+											var timestamps		 = '1470770741';// using FORM timestamps to view attachments properly in case of previewing a message
+											var file_types  	 = 'bmp,doc,docx,gif,jpe,jpeg,jpg,pdf,png,rtf,txt,xls,xlsx,zip';
+											var file_upload		 = '0'; // variable to count already attached files
+											var attachment_count =  file_upload;
+											var max_file_size  	 = '51200';
+											var type 			 = '9'; // initialized type value with 9 for inline item
+										</script>
+										
+										
+										
+
+
+
+
+<div class="upload-attachments clearfix" id="attachmentCotainer_">
+	<span id="deleting_attachment" ><b>Deleting Attachment...</b></span>
+	<ul class="post-attachments  hidden " id="attachment_list">	  
+		
+				
+	</ul>
+</div>
+
+
+<div id="fileids_up" class="hidden">	
+	<li id="upprogress_get_fileid_up">
+		<span class="col-sm-2">
+			<span id="get_fileid_up" class="file-type-icon file_type_icon"></span><a href="">get_filename</a><span class="file-size">get_filesize</span>
+		</span>
+		<span class="col-sm-3 pull-right">
+			<div class="progress col-sm-8">
+			<div id="progressget_fileid_up" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
+			0%		  			
+			</div>
+			</div>
+			<a id="attachCancel_upfileid_uploaderid" href="javascript:;" class="text-muted bd-wrapper pull-right">Cancel</a>
+		</span>
+	</li>	                
+</div>
+
+
+<div id ="upload_tag_get_fileid_up" class="hidden">
+	<div class="upload_tag">Uploading...</div>
+</div>
+
+
+
+<div id = "fileids_after" class="hidden">	
+	<li class="file" id="get_fileid_after">
+	  <span id ="thumb_img_get_fileid_after" class="pull-left hidden">
+		<img width="30" height="30" src=""/><span class="file-type-icon file_type_icon"></span>
+		<span class="pull-left">
+			<a href="/file?id=get_jfileid">get_filename</a><span class="file-size">get_filesize &middot;</span>
+		</span>
+	  </span>
+	  <input type="hidden" name="file_id" id="file_id_get_file_upload" value="get_jfileid"/>
+	  <span id ="thumb_img_ext_get_fileid_after" class="pull-left hidden">
+		<img width="30" height="30" src=""/><span class="file-type-icon file_type_icon"></span><a href="/file?id=get_jfileid">get_filename</a><span class="file-size">get_filesize &middot;</span>
+	  </span>	  
+	  <span class="pull-right">		
+		<!-- Show upon load -->		
+		<small><a id="delete_attachmentget_fileid_after" href="javascript:void(0)" title="Delete this attachment" class="pull-right text-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a></small>
+		
+			<small><a id="get_post_elm_id_fileid" href="javascript:void(0);" title="Insert this attachment into your post content"  class="pull-right text-muted hidden"><i class="glyphicon glyphicon-plus"></i> Insert Inline</a></small>
+			<small><a id="get_pmsg_elm_id_fileid" href="javascript:void(0);" title="Insert this attachment into your private message content"  class="pull-right text-muted hidden"><i class="glyphicon glyphicon-plus"></i> Insert Inline</a></small>
+				
+	  </span>
+	</li>
+	
+</div>
+
+									
+								  </div>
+								  
+									  <div class="form-group">
+										<label for="inputinstant" class="col-md-2 control-label">Category</label>
+										<div class="col-md-9">
+											<select name="forum" id="all_forums_dropdown" class="form-control">
+												<option value="">Select a Category</option>
+												
+
+ 	
+	
+		<option value="542853" >Our Discussions</option>	
+			
+			
+
+
+										    </select>
+										</div>
+									  </div>
+								 
+								  <hr>
+	                             
+
+	                              <div class="form-group">
+	                                <span class="col-md-10 col-md-offset-2">
+										<button type="submit" class="btn btn-primary" name="submitbutton" id="post_submit" value="Post New Topic">Post</button>
+										<button type="submit" class="bd-wrapper btn btn-subtle" name="sbtpreview" id="previewpost_sbt" value="Preview Post">Preview Post</button>
+										
+										<button type="button" class="bd-wrapper btn btn-subtle" name="cancel" id="cancel_post" value="Cancel">Cancel</button>
+	                                  <span id="message-options" class="bd-wrapper">
+										
+											<a id="fancy_attach_" href="javascript:void(0);" class="text-muted" data-toggle="tooltip" title="Attach files" data-placement="top"><i class="glyphicon glyphicon-paperclip"></i></a>
+											
+												<a id="insert_image_dialog_" class="text-muted" data-toggle="tooltip" title="Insert photos" data-placement="top"><i class="glyphicon glyphicon-camera"></i></a>
+											
+										
+
+	                                    <span class="cleared custom-checkbox">
+											<!-- you cant follow while your editing a post -->
+											
+												  <span>
+													<label class="control-label">
+														<i class="glyphicon glyphicon-plus"></i><input type="checkbox" name="e_reply" checked id="EMNEW" checked value="checked">
+														<span class="text-muted">&nbsp; Follow</span>
+													</label>
+												  </span>
+											
+											
+												<span id="pin_thread" >
+													<label class="control-label">
+														<i class="glyphicon glyphicon-pushpin"></i><input name="pin" value="checked" id="Pin"  type="checkbox">
+														<span class="text-muted">&nbsp; Pin</span>
+													</label>
+												</span>
+												<span id="lock_thread" >
+													<label class="control-label">
+														<i class="glyphicon glyphicon-lock"></i><input name="locked" value="checked" id="LCK"  type="checkbox">
+														<span class="text-muted">&nbsp; Lock</span>
+													</label>
+												</span>
+											
+	                                    </span>
+	                                  </span>
+	                                </span>
+	                            </div>
+	                            <div class="form-group">
+	                              <label class="col-xs-2"></label>
+	                            </div>
+								
+								
+								<input type="hidden" name="id" value="0">
+								<input type="hidden" name="pid" value="0">
+								<input type="hidden" name="referral" value="https://britthosty.discussion.community/" id ="referral">
+								<input type="hidden" name="user_id" value="4615614">
+								<input id="attachment_ids" type="hidden" name="attachment_ids" value="">
+								<input id="uncheck_attachment_ids" type="hidden" name="uncheck_attachment_ids" value="">
+								<input type="hidden" name="done" value="1">
+								<input type="hidden" name="cist" value="">
+								<input type="hidden" name="searchid" value="">
+								<input type="hidden" name="trail" value="">
+								<input type="hidden" name="edit" value="" id="edit_post">
+								<input type="hidden" name="action" value="addmessage">
+								<input type="hidden" id="timestamps" name="timestamps" value="1470770741">
+								<input type="hidden" name="threadid" value="">
+								<input type="hidden" id="postpreview" name="postpreview" value="0">
+								
+								
+	                        </div>
+	                      </div>
+	                  </div>
+	                
+					
+						 <div role="tabpanel" class="tab-pane " id="poll">
+  <div class="panel panel-default">
+	
+	<div class="panel-body table-responsive">
+			<div class="form-group">
+			  <label class="col-sm-5"></label>
+			</div>
+	
+		<div class="form-group">
+			<div class="col-sm-9 col-sm-offset-1 ">
+				<input type="text" class="form-control" name="question" id="poll_question" value="" maxlength=252 size="40" autocomplete="off" placeholder="Poll Question">
+			</div>
+		  <div class="inline-checkbox  col-sm-offset-1">
+			<label>
+			  <input type="checkbox" name="public" value="1" id="public" >&nbsp; Make voter names public
+			</label>
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <div class="col-sm-10 clearfix col-sm-offset-1 " id="poll_option_container">
+				
+					
+					 <span	 class="poll-option clearfix" id="poll_option_1">
+					  <div class="input-group col-sm-8 pull-left">
+						<span class="input-group-addon">1</span>
+						<input name="options" value="" size="40" type="text" class="form-control">
+					  </div>
+					  <div class="col-sm-1 bd-wrapper">
+						<input type="hidden" name="votes" class="form-control" value="0" data-toggle="tooltip" title="Votes">
+					  </div>
+					</span>
+				
+					
+					 <span	 class="poll-option clearfix" id="poll_option_2">
+					  <div class="input-group col-sm-8 pull-left">
+						<span class="input-group-addon">2</span>
+						<input name="options" value="" size="40" type="text" class="form-control">
+					  </div>
+					  <div class="col-sm-1 bd-wrapper">
+						<input type="hidden" name="votes" class="form-control" value="0" data-toggle="tooltip" title="Votes">
+					  </div>
+					</span>
+				
+		  </div>
+		  <div class="inline-checkbox col-sm-10 col-sm-offset-1 ">
+			<a href="javascript:" class="pull-left" id="add_new_poll">+ Add option</a>
+			<div class="pull-left bd-wrapper">
+			  <label>
+				<input type="checkbox" name="multiple" value="1" id="multiple" >&nbsp; Allow multiple choice
+			  </label>
+			</div>
+		  </div>
+	  </div>
+	  <div class="form-group poll-timeout cleared">
+		
+		
+			<span class="clearfix">
+			  <div class="pull-left col-sm-offset-1 ">
+				  <a data-toggle="collapse" href="#poll-timeout" aria-expanded="false" aria-controls="poll-timeout"><b class="text-danger">Close voting 3 days after just now</b> &nbsp;<small class="glyphicon glyphicon-pencil text-muted" data-toggle="tooltip" title="Change poll timeout"></small></a>
+			  </div>
+			</span>
+		
+		<br>
+		<div  class="collapse"  id="poll-timeout" data-toggle="radio" role="group">
+			  <span class="clearfix">
+				<div class="pull-left col-sm-offset-1">
+				  <label class="clearfix">
+					<span class="pull-left"><input type="radio" id="timeout1" name="timeout_format" value="days" checked>&nbsp; Close voting</span>
+					<span class="col-sm-2 bd-wrapper">
+					  <input value="3" type="number" name="timeout_days" class="form-control" min="0">
+					</span>
+					<span class="pull-left bd-wrapper">days after just now</span>
+				  </label>
+				</div>
+				<div class="pull-left col-sm-offset-1 cleared">
+				  <label class="clearfix">
+					<span class="pull-left"><input type="radio" id="timeout2" name="timeout_format" value="date"  >&nbsp; Close voting on</span>
+					<span class="col-sm-5 bd-wrapper">
+					  <input class="form-control show-datepicker" placeholder="mm/dd/yyyy" type="text" name="timeout_timestamp" value="" maxlength=10 size=10  id="poll_timeout_date">
+					</span>
+				  </label>	
+				</div>
+				
+				<div class="pull-left col-sm-offset-1 cleared">
+				  <label class="clearfix">
+					<span class="pull-left"><input type="radio" name="timeout_format" value="close_never" >&nbsp; Never close voting</span>
+				  </label>
+				</div>
+			  </span>
+			</div>
+	    </div>
+		<hr> 
+		<div class="form-group">
+		  <span title="" data-original-title="" class="col-sm-10  col-sm-offset-1">
+			<button type="submit" class="btn btn-primary"  name="pollsave" id="save_poll">Save Poll</button>
+			<button type="submit" class="bd-wrapper btn btn-subtle" name="pollpreview" id="pollPreviewSbt">Preview Poll</button>
+			
+				<input id="pollSaveFromComposeThread" type="hidden" name="pollSaveFromComposeThread" value="0">
+			
+		  </span>
+		</div>
+		<div class="form-group">
+		  <label class="col-sm-2"></label>
+		</div>
+	
+	</div>
+	
+  </div>
+</div>
+<div id="poll_options" class="hidden">
+	 <span class="poll-option clearfix" id="">
+	  <div class="input-group col-sm-8 pull-left">
+		<span class="input-group-addon"></span>
+		<input name="options" value="" size="40" type="text" class="form-control">
+	  </div>
+	  
+	  <span class="delete-option bd-wrapper">
+		<a href="javascript:" data-toggle="tooltip" id="" title="Delete option" data-placement="bottom" data-opt-num=""><i class="glyphicon glyphicon-minus"></i></a>
+	  </span>
+	</span>
+</div>
+
+	                
+	             </div>
+	 	  	</form>
+          </div>
+		</div>
+		<div class="reply-menu pull-left">
+		  <a href="" class="text-muted" data-toggle="tooltip" title="Attach files" data-placement="top"><i class="icon glyphicon-paperclip"></i></a>
+		  <a class="text-muted" data-toggle="modal" data-backdrop="true" data-keyboard="true" href="#photos-modal"><i data-toggle="tooltip" class="glyphicon glyphicon-camera" title="Insert photos" data-placement="top"></i></a>
+		  <div class="notify-me pull-right">
+		    <label for=""><input type="checkbox" class="bd-wrapper"><span class="facebook-sm text-muted"><em>F</em> Share</span></label>
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Insert image dialog box-->
+
+<div class="modal fade" id="insertimagemodal"  tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" id="bootstrap_close_image_dialog">&times;</button>
+		  <h4 class="modal-title" id="online-modal-label">Insert Photos</h4>
+		</div>
+		<div class="modal-body">
+		  <div role="tabpanel">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist" id="tabs">		  
+							
+				
+					<li role="presentation" class="active"><a href="#upload" class="computer" id="computer" aria-controls="upload" role="tab" data-toggle="tab">Upload</a></li>
+				
+				<li role="presentation"><a href="#url"  class="web" id="web" aria-controls="url" role="tab" data-toggle="tab">Web Address (URL)</a></li>			  
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+						
+			
+			  <div role="tabpanel" class="tab-pane active" id="upload">
+				<div id="uploadImage" class="form-group pull-left">
+				  <span id="imagesInserted" class="post-body-image">					
+				  </span>
+				  <span id="imagesError" class="upload-message cleared"></span>
+				  <a id="insertImage_" class="btn btn-primary">Browse</a>
+				  <span class="text-muted bd-wrapper">Select photos on your computer to upload.</span>
+				</div>
+			  </div>
+			 
+			  <div role="tabpanel" class=" tab-pane " id="url">
+				<div class="form-group pull-left">
+					<label for="post-link"><strong>Paste an image URL here:</strong></label>				
+					<input type="text" id="web_image_url" name="fname" class="form-control">
+					<br>
+					<div class="alert alert-gray text-center">				  
+					  <div id="web_image_display" class="post-body-attachment">
+						<img id="web_image" class="hidden">
+					  </div>
+					  <span id="preview_text">If your URL is correct, you'll see an image preview here.  Large images may take a few minutes to appear. </span>
+					  <small>Remember: Using others' images on the web without their permission may be bad manners, or worse, copyright infringement.</small>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="modal-footer cleared">
+		  <div class="pull-right">			
+			<button type="button" id="insert_image_btn" class="btn btn-primary" disabled>Insert</button>
+			<a id="bootstrap_close_insert_image_dialog" class="btn btn-subtle bd-wrapper">Cancel</a>
+			<input type="hidden" id="image_id" value="" >
+		
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="insert_image_content" class="hidden">
+		<span id="fileid"></span>	
+	</div>
+	
+	<div id="uploaded_image" class="hidden">
+		<img alt="" class="post-image unselect_image" id=''>
+	</div>
+
+	<div id="uploading" class="hidden">	
+		<span id="upprogress_fileidup" class="alert alert-info col-sm-12">
+			<strong class="pull-left">filename</strong> 
+			<div class="progress bd-wrapper col-sm-3">
+				<div id="progressfileidup" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+				0%
+				</div>
+			</div>
+			<a id="attachCancel_fileidup_uploaderid" href="javascript:;" class="pull-right"><i>Cancel</i></a>
+		</span>		
+	</div>
+
+	<div id="upload_fail" class="hidden">
+		<span><font color="#FF0000">(Failed)</font>filename<br>Unsupported photo file type. Please upload the file as a post attachment instead.</span>
+	</div>
+
+	<div id="upload_error" class="hidden">
+		<span class="alert alert-danger"><strong>filename</strong> <i class="pull-right">strippederror</i></span>
+	</div>	
+
+	<div id="insert_photos" class="hidden">
+		<img class="bbc_img">&nbsp;
+	</div>
+	
+</div>
+
+
+<div id="pms_attach_thumbs" class="hidden">
+	<li><span class="file-type-icon extension"></span>
+		<a href="/file?id=attach_id" target="_blank">filename</a>
+		<span class="file-size">filesize &middot;</span>
+	</li>
+</div>
+<div id="pms_attach_files" class="hidden">
+	<li><span class="file-type-icon extension"></span>
+		<a href="/file?id=attach_id">filename</a>
+		<span class="file-size">filesize &middot;</span>
+	</li>	
+</div>
+<div id="pms_attach_images" class="hidden">
+	<a href="/file?id=attach_id" target="_blank" rel="lightbox[]">
+		<span class="post-image" alt="Click image for larger version - Name: filename, Views:0, Size: filesize" title="Click image for larger version - Name: filename, Views: 0, Size: filesize" style="background:url(https://s3.amazonaws.com/betafiles.websitetoolbox.com/uid/thumb/attach_id)">
+		</span>
+	</a>
+</div>
+
+
+
+	
+	
+	<div class="hidden" id="popover_content">
+		<div class="popover hovercard" role="tooltip">
+			<div class="arrow"></div>
+			<h3 class="popover-title"></h3>
+			<div class="popover-content">
+			</div>
+		</div>
+	</div>
+	
+	
+	
+
+<div id="hover_card_content"></div>
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+				key: 'ccc2217bc2b75c4bdf5f7e57267f0464' };
+  (function(d, t) {
+	var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+	s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+			 '//cdn.viglink.com/api') + '/vglnk.js';
+	var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+
+<!--Below elemt used to set iframe height for down-sizing-->
+<div data-iframe-height style="position: relative"></div>
+
+
+
+
+
+
+
+	
+		<script src="/spellcheck/spellChecker.js" defer></script>	
+	
+	<script type="text/javascript">
+			var smilie_user = 'britthosty';
+	</script>
+	<!-- Emoticons Modal -->
+	<div class="modal fade" id="smilie_popup" tabindex="0" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_emoticons_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="online-modal-label">Emoticons</h4>
+				</div>
+				<div class="modal-body">
+					<div id="smilie_inner_content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Emoticons Modal -->
+	
+	<!-- Insert Video Modal -->
+	<div class="modal fade" id="video_popup" tabindex="0" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_insert_url_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="online-modal-label">Insert Video</h4>
+				</div>
+				<div class="modal-body">
+					<div id="video_inner_content">
+						<label for="enter_video" class="control-label">Enter your video clip URL below:</label>
+						<div class="form-group">
+							<input id="dialog_input_value" class="form-control" size=51 type="text" value="http://" >
+						</div>
+						<div class="form-group">
+							<span class="text-muted">Example: <a target="_blank" href="http://www.youtube.com" >http://www.youtube.com/watch?v=1234567</a></span>
+						</div>
+						<div id="video_list" class="form-group">
+							<p><b>Supported videos include:</b></p>
+							<a target="_blank" href="http://www.youtube.com">YouTube,</a>&nbsp;					
+							<a target="_blank" href="http://www.vimeo.com">Vimeo,</a>&nbsp;					
+							<a target="_blank" href="http://www.dailymotion.com">Dailymotion,</a>&nbsp;					
+							<a target="_blank" href="http://www.metacafe.com">Metacafe,</a>&nbsp;				
+							<a target="_blank" href="http://www.facebook.com">Facebook</a>&nbsp;
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="pull-right">
+						<a href="javascript:void(0);" id="insert_video_url" class="btn btn-primary">Insert URL</a>
+						<button class="btn btn-subtle bd-wrapper" id="bootstrap_close_insert_url" >Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Insert Video Modal -->	
+	<div id="code_popup" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_insert_code_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" 
+					id="online-modal-label">Insert Code</h4>
+				</div>
+				<!-- dialog body -->
+				<div class="modal-body">
+					<p>Please paste your code into the box below:</p>
+					<div class="form-group">
+						<textarea id="dialog_input_code_value" rows="4" cols="50" class="form-control"></textarea>
+					</div>
+				</div>
+				<!-- dialog buttons -->
+				<div class="modal-footer">
+						<button type="button" id='code_button_tce' class="btn btn-primary">OK</button>
+					<button type="button" class="btn btn-subtle" id="bootstrap_close_insert_code" >Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
+
